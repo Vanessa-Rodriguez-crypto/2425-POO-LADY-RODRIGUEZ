@@ -14,19 +14,19 @@ def mostrar_menu():
     ruta_base = os.path.dirname(os.path.abspath(__file__))
 
     opciones = {
-        '1': os.path.join("UNIDAD 1", "1.2 TECNICA DE PROGRAMACION", "TECNICA DE PROGRAMACION.py"),
-        '2': os.path.join("UNIDAD 1", "2.1 La POO frente a la programación tradiciona",
+        '1' : os.path.join("UNIDAD 1", "1.2 TECNICA DE PROGRAMACION", "TECNICA DE PROGRAMACION.py"),
+        '2' : os.path.join("UNIDAD 1", "2.1 La POO frente a la programación tradiciona",
                           "Programación Orientada a Objetos (POO).py"),
-        '3': os.path.join("UNIDAD 1", "2.1 La POO frente a la programación tradiciona", "Programación Tradicional.py"),
-        '4': os.path.join("UNIDAD 1", "2.2 CARACTERISTICAS DE LA PROGRAMACION ORIENTADA A OBJECTO", "MundoReal_POO",
+        '3' : os.path.join("UNIDAD 1", "2.1 La POO frente a la programación tradiciona", "Programación Tradicional.py"),
+        '4' : os.path.join("UNIDAD 1", "2.2 CARACTERISTICAS DE LA PROGRAMACION ORIENTADA A OBJECTO", "MundoReal_POO",
                           "Biblioteca.py"),
-        '5': os.path.join("UNIDAD 1", "2.2 CARACTERISTICAS DE LA PROGRAMACION ORIENTADA A OBJECTO", "MundoReal_POO",
+        '5' : os.path.join("UNIDAD 1", "2.2 CARACTERISTICAS DE LA PROGRAMACION ORIENTADA A OBJECTO", "MundoReal_POO",
                           "Reserva de un Hotel.py"),
-        '6': os.path.join("UNIDAD 1", "2.2 CARACTERISTICAS DE LA PROGRAMACION ORIENTADA A OBJECTO", "MundoReal_POO",
+        '6' : os.path.join("UNIDAD 1", "2.2 CARACTERISTICAS DE LA PROGRAMACION ORIENTADA A OBJECTO", "MundoReal_POO",
                           "Tienda de dos clientes.py"),
-        '7': os.path.join("UNIDAD 2", "2.1 TIPOS DE DATOS, IDENTIFICADORES", "Unidad de medidas.py"),
-        '8': os.path.join("UNIDAD 2", "T1.2 Objetos, clases, Herencia, Encapsulamiento, Polimorfismo", "COCHES.py"),
-        '9': os.path.join("UNIDAD 2", "T1.3 CONSTRUCTORES Y DESTRUCTORES", "GESTIÓN DE ARCHIVOS.py"),
+        '7' : os.path.join("UNIDAD 2", "2.1 TIPOS DE DATOS, IDENTIFICADORES", "Unidad de medidas.py"),
+        '8' : os.path.join("UNIDAD 2", "T1.2 Objetos, clases, Herencia, Encapsulamiento, Polimorfismo", "COCHES.py"),
+        '9' : os.path.join("UNIDAD 2", "T1.3 CONSTRUCTORES Y DESTRUCTORES", "GESTIÓN DE ARCHIVOS.py"),
     }
 
     while True:
