@@ -1,6 +1,3 @@
-import json
-
-
 class Producto:
     def __init__(self, id_producto, nombre, cantidad, precio):
         self.id_producto = id_producto
@@ -28,14 +25,14 @@ class Inventario:
             print("Error: El ID ya existe en el inventario.")
         else:
             self.productos[id_producto] = Producto(id_producto, nombre, cantidad, precio)
-            self.guardar_en_archivo()
             print("Producto agregado con éxito.")
+            self.guardar_en_archivo()
 
     def eliminar_producto(self, id_producto):
         if id_producto in self.productos:
             del self.productos[id_producto]
-            self.guardar_en_archivo()
             print("Producto eliminado con éxito.")
+            self.guardar_en_archivo()
         else:
             print("Error: No se encontró el producto.")
 
@@ -45,8 +42,8 @@ class Inventario:
                 self.productos[id_producto].actualizar_cantidad(nueva_cantidad)
             if nuevo_precio is not None:
                 self.productos[id_producto].actualizar_precio(nuevo_precio)
-            self.guardar_en_archivo()
             print("Producto actualizado con éxito.")
+            self.guardar_en_archivo()
         else:
             print("Error: No se encontró el producto.")
 
@@ -65,16 +62,18 @@ class Inventario:
             print("El inventario está vacío.")
 
     def guardar_en_archivo(self):
-        with open("inventario.json", "w") as archivo:
-            json.dump({id: vars(prod) for id, prod in self.productos.items()}, archivo, indent=4)
+        with open("inventario.txt", "w") as archivo:
+            for producto in self.productos.values():
+                archivo.write(f"{producto.id_producto},{producto.nombre},{producto.cantidad},{producto.precio}\n")
 
     def cargar_desde_archivo(self):
         try:
-            with open("inventario.json", "r") as archivo:
-                datos = json.load(archivo)
-                self.productos = {id: Producto(**info) for id, info in datos.items()}
+            with open("inventario.txt", "r") as archivo:
+                for linea in archivo:
+                    id_producto, nombre, cantidad, precio = linea.strip().split(",")
+                    self.productos[id_producto] = Producto(id_producto, nombre, int(cantidad), float(precio))
         except FileNotFoundError:
-            self.productos = {}
+            pass
 
 
 def menu():
