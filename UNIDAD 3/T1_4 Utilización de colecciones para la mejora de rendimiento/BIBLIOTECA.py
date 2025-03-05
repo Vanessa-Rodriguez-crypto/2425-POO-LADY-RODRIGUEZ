@@ -127,7 +127,7 @@ biblioteca.agregar_libro(libro2)
 biblioteca.agregar_libro(libro3)
 
 # Registrar usuarios
-usuario1 = Usuario("Fernando Mejia", "U001")
+usuario1 = Usuario("Fernando Algarin", "U001")
 usuario2 = Usuario("Laura Rodriguez", "U002")
 biblioteca.registrar_usuario(usuario1)
 biblioteca.registrar_usuario(usuario2)
